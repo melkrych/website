@@ -1,0 +1,26 @@
+.nav {
+    margin: 50px auto 0 auto;
+    text-align: center;
+}
+.nav a {
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+.nav a:hover {
+    cursor:pointer;
+}
+#navlogo {font-weight: bold; padding: 5px}
+#navdivider {display:inline; padding: 7px}
+.selectedpage {font-style:italic;}
+
+@media screen and (max-width: 600px) {
+    .nav {
+        font-size: smaller;
+    }
+}
+@media screen and (max-width: 500px) {
+    .nav {
+        font-size: x-small;
+    }
+}
