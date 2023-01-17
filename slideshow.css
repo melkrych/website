@@ -45,4 +45,6 @@
 .slideshow-item {
     height: 300px;
 }
+#button-left {height: 40vh;}
+#button-right {height: 40vh;}
 }
