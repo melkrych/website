@@ -8,6 +8,10 @@
     width: auto;
     height: 600px;
 }
+.slideshow-video {
+    width: 1008;
+     height: 567;
+}
 .credits-box {
     margin: 5px auto 0 auto;
     display: flex;
@@ -45,6 +49,13 @@
 .slideshow-item {
     height: 300px;
 }
-#button-left {height: 40vh;}
-#button-right {height: 40vh;}
+.slideshow
+#button-left {
+    height: 45vh;
+    top: 3vh;
+}
+#button-right {
+    height: 45vh;
+    top: 3vh;
+}
 }

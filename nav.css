@@ -15,12 +15,5 @@
 .selectedpage {font-style:italic;}
 
 @media screen and (max-width: 600px) {
-    .nav {
-        font-size: smaller;
-    }
-}
-@media screen and (max-width: 500px) {
-    .nav {
-        font-size: x-small;
-    }
+    .nav {display:none;}
 }

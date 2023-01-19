@@ -4,11 +4,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="nav.css">
         <link rel="stylesheet" href="project-container.css">
+        <link rel="stylesheet" href="mobilenav.css">
     </head>
     <body>
         <div class="nav"> <!-- NAVIGATION: store several catagories that link to other pages. The box should be static, centered at the top -->
             <a id="navlogo" href="index.html">MEL KRYCH</a>
             <div id="navdivider">/</div>
+            <a class="selectedpage" href="index.html">FILM</a>
+            <a href="photography.html">PHOTOGRAPHY</a>
+            <a href="graphicdesign.html">GRAPHIC DESIGN</a>
+            <a href="writing.html">WRITING</a>
+        </div>
+        <div id="hamburger" href="javascript:void(0);" onclick="openNav()">&#9776;</div>
+        <div id="mobilenav">
             <a class="selectedpage" href="index.html">FILM</a>
             <a href="photography.html">PHOTOGRAPHY</a>
             <a href="graphicdesign.html">GRAPHIC DESIGN</a>
@@ -48,5 +56,15 @@
                 <div class="thumbnail-caption">YELLOW</div>
             </div>
         </div>
+        <script>
+            function openNav() {
+            var x = document.getElementById("mobilenav");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+            }
+        </script>
     </body>
 </html>
