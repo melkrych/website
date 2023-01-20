@@ -1,52 +1,84 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="nav.css">
-        <link rel="stylesheet" href="project-container.css">
-        <link rel="stylesheet" href="slideshow.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="nav.css">
+      <link rel="stylesheet" href="project-container.css">
+      <link rel="stylesheet" href="slideshow.css">
+      <link rel="stylesheet" href="mobilenav.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <!--GOOGLE FONTS-->
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="nav"> <!-- NAVIGATION: store several catagories that link to other pages. The box should be static, centered at the top -->
-            <a id="navlogo" href="index.html">MEL KRYCH</a>
-            <div id="navdivider">/</div>
-            <a href="index.html">FILM</a>
-            <a href="photography.html">PHOTOGRAPHY</a>
-            <a class="selectedpage" href="graphicdesign.html">GRAPHIC DESIGN</a>
-            <a href="writing.html">WRITING</a>
-        </div>
-        <button onclick="plusDivs(-1)" id="button-left"></button>
-        <button onclick="plusDivs(1)" id="button-right"></button>
-        <div class="slideshow-container">
-            <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 7.JPG">
-            <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 8(1).JPG">
-            <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 8(2).JPG">
-            <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 9.JPG">
-            <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 10.JPG">
-            <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 11.JPG">
-            <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 12.JPG">
-            <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 13.JPG">
-            <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 14.JPG">
-            <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 15.JPG">
-        </div>
-        <script>
-            var slideIndex = 1;
-            showDivs(slideIndex);
-            
-            function plusDivs(n) {
-              showDivs(slideIndex += n);
+      <a id="mobilelogo" href="index.html">MEL KRYCH</a>
+      <div class="nav"> <!-- NAVIGATION: store several catagories that link to other pages. The box should be static, centered at the top -->
+          <a id="navlogo" href="index.html">MEL KRYCH</a>
+          <div id="navdivider">/</div>
+          <a href="index.html">FILM</a>
+          <a href="photography.html">PHOTOGRAPHY</a>
+          <a class="selectedpage" href="graphicdesign.html">GRAPHIC DESIGN</a>
+          <a href="writing.html">WRITING</a>
+      </div>
+      <div id="opennav" href="javascript:void(0);" onclick="openNav()">&#9776;</div>
+      <div id="mobilenav">
+          <div id="closenav" href="javascript:void(0);" onclick="openNav()">X</div>
+          <a class="selectedpage" href="index.html">FILM</a>
+          <a href="photography.html">PHOTOGRAPHY</a>
+          <a href="graphicdesign.html">GRAPHIC DESIGN</a>
+          <a href="writing.html">WRITING</a>
+      </div>
+      <button onclick="plusDivs(-1)" style="left: 0;" class="slideshow-hitbox"></button>
+      <button onclick="plusDivs(1)" style="right: 0;" class="slideshow-hitbox"></button>
+      <div class="slideshow-container">
+          <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 7.JPG">
+          <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 8(1).JPG">
+          <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 8(2).JPG">
+          <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 9.JPG">
+          <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 10.JPG">
+          <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 11.JPG">
+          <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 12.JPG">
+          <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 13.JPG">
+          <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 14.JPG">
+          <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 15.JPG">
+      </div>
+      <div class="credits-box">
+        <a onclick="plusDivs(-1)" style="padding-right: 40%;" class="slideshow-button">&#60;</a>
+        <a onclick="plusDivs(1)" style="padding-left: 40%;" class="slideshow-button">&#62;</a>
+      </div>
+      <script>
+          var slideIndex = 1;
+          showDivs(slideIndex);
+          
+          function plusDivs(n) {
+            showDivs(slideIndex += n);
+          }
+          
+          function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slideshow-item");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
             }
-            
-            function showDivs(n) {
-              var i;
-              var x = document.getElementsByClassName("slideshow-item");
-              if (n > x.length) {slideIndex = 1}
-              if (n < 1) {slideIndex = x.length}
-              for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
-              }
-              x[slideIndex-1].style.display = "block";  
-            }
-            </script>
+            x[slideIndex-1].style.display = "block";  
+          }
+      </script>
+      <script>
+        function openNav() {
+        var x = document.getElementById("mobilenav");
+        var y = document.getElementById("opennav");
+        if (x.style.display === "flex") {
+            x.style.display = "none";
+            y.style.display = "block";
+        } else {
+            x.style.display = "flex";
+            y.style.display = "none";
+
+        }
+        }
+      </script>
     </body>
 </html>

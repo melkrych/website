@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="slideshow.css">
     </head>
     <body>
+        <a id="mobilelogo" href="index.html">MEL KRYCH</a>
         <div class="nav"> <!-- NAVIGATION: store several catagories that link to other pages. The box should be static, centered at the top -->
             <a id="navlogo" href="index.html">MEL KRYCH</a>
             <div id="navdivider">/</div>
@@ -16,14 +17,30 @@
             <a href="graphicdesign.html">GRAPHIC DESIGN</a>
             <a href="writing.html">WRITING</a>
         </div>
-        <div id="hamburger" href="javascript:void(0);" onclick="openNav()">&#9776;</div>
+        <div id="opennav" href="javascript:void(0);" onclick="openNav()">&#9776;</div>
         <div id="mobilenav">
+            <div id="closenav" href="javascript:void(0);" onclick="openNav()">X</div>
             <a class="selectedpage" href="index.html">FILM</a>
             <a href="photography.html">PHOTOGRAPHY</a>
             <a href="graphicdesign.html">GRAPHIC DESIGN</a>
             <a href="writing.html">WRITING</a>
         </div>
         <div class="slideshow-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ra3KavaB0eA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </body>
+            <iframe class="slideshow-video" src="https://www.youtube.com/embed/ra3KavaB0eA?color=white" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <script>
+            function openNav() {
+            var x = document.getElementById("mobilenav");
+            var y = document.getElementById("opennav");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+                y.style.display = "block";
+            } else {
+                x.style.display = "flex";
+                y.style.display = "none";
+
+            }
+            }
+        </script>
+        </body>
 </html>

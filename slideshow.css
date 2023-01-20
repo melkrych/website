@@ -1,45 +1,52 @@
+body {
+    font-family: 'Public Sans', sans-serif;
+}
 .slideshow-container {
+    z-index: 0;
     margin: 6% auto 0 auto;
     display: flex;
     justify-content:space-evenly;
+    flex-wrap: wrap;
     align-content: left;
 }
 .slideshow-item {
     width: auto;
     height: 600px;
 }
+.slideshow-title { /* VIDEO SLIDESHOWS ONLY, FRICTION w/ JS */
+    text-align: left;
+}
 .slideshow-video {
-    width: 1008;
-     height: 567;
+    width: 1008px;
+     height: 567px;
 }
 .credits-box {
-    margin: 5px auto 0 auto;
+    margin: 20px auto 50px auto;
     display: flex;
-    align-content: left;
+    padding: 10px;
+    justify-content: center;
     text-align: left;
     max-width: 600px;
+    height: 20px;
 }
-#button-left {
+.slideshow-hitbox {
+    z-index: 1;
     position: absolute;
-    left: 0;
     bottom: 0;
     width: 30%;
     height: 80vh;
     opacity: 0;
 }
-#button-right {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 30%;
-    height: 80vh;
-    opacity: 0;
+.slideshow-button {
+    z-index: 2;
+    font-size: 21px;
 }
 #download-button {
+    z-index: 2;
     position: absolute;
     cursor: pointer;
     color: black;
-    text-decoration: none;
+    text-decoration: underline;
 }
 #button-left:hover {cursor: w-resize;}
 #button-right:hover {cursor: e-resize;}
@@ -49,13 +56,19 @@
 .slideshow-item {
     height: 300px;
 }
-.slideshow
-#button-left {
+.slideshow-video {
+    margin-top: 30%;
+    width: 392px;
+    height: 220.5px;
+}
+.slideshow-hitbox {
     height: 45vh;
     top: 3vh;
 }
-#button-right {
-    height: 45vh;
-    top: 3vh;
+.credits-box{
+    margin: 20px auto 0 auto;
+    text-align: center;
+    justify-content: center;
+    border: none;
 }
 }

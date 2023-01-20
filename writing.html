@@ -5,8 +5,10 @@
         <link rel="stylesheet" href="nav.css">
         <link rel="stylesheet" href="project-container.css">
         <link rel="stylesheet" href="slideshow.css">
+        <link rel="stylesheet" href="mobilenav.css">
     </head>
     <body>
+      <a id="mobilelogo" href="index.html">MEL KRYCH</a>
         <div class="nav"> <!-- NAVIGATION: store several catagories that link to other pages. The box should be static, centered at the top -->
             <a id="navlogo" href="index.html">MEL KRYCH</a>
             <div id="navdivider">/</div>
@@ -15,8 +17,16 @@
             <a href="graphicdesign.html">GRAPHIC DESIGN</a>
             <a class="selectedpage" href="writing.html">WRITING</a>
         </div>
-        <button onclick="plusDivs(-1)" id="button-left"></button>
-        <button onclick="plusDivs(1)" id="button-right"></button>
+        <div id="opennav" href="javascript:void(0);" onclick="openNav()">&#9776;</div>
+        <div id="mobilenav">
+            <div id="closenav" href="javascript:void(0);" onclick="openNav()">X</div>
+            <a class="selectedpage" href="index.html">FILM</a>
+            <a href="photography.html">PHOTOGRAPHY</a>
+            <a href="graphicdesign.html">GRAPHIC DESIGN</a>
+            <a href="writing.html">WRITING</a>
+        </div>
+        <button onclick="plusDivs(-1)" style="left: 0;" class="slideshow-hitbox"></button>
+        <button onclick="plusDivs(1)" style="right: 0;" class="slideshow-hitbox"></button>
         <div class="slideshow-container">
             <img class="slideshow-item" src="writing/fearinhorror/1.jpg">
             <img class="slideshow-item" src="writing/fearinhorror/2-3.jpg">
@@ -33,6 +43,8 @@
             <img class="slideshow-item" src="writing/fearinhorror/24-25.jpg">
         </div>
         <div class="credits-box">
+          <a onclick="plusDivs(-1)" style="padding-right: 40%;" class="slideshow-button">&#60;</a>
+          <a onclick="plusDivs(1)" style="padding-left: 40%;" class="slideshow-button">&#62;</a>
           <a href="writing/fearinhorror/Fear in horror film stills.pdf" download="Fear in horror film stills.pdf" id="download-button">
             Download PDF
           </a>
@@ -55,6 +67,20 @@
               }
               x[slideIndex-1].style.display = "block";  
             }
-            </script>
+        </script>
+        <script>
+          function openNav() {
+          var x = document.getElementById("mobilenav");
+          var y = document.getElementById("opennav");
+          if (x.style.display === "flex") {
+              x.style.display = "none";
+              y.style.display = "block";
+          } else {
+              x.style.display = "flex";
+              y.style.display = "none";
+
+          }
+          }
+        </script>
     </body>
 </html>

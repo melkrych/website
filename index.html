@@ -5,8 +5,12 @@
         <link rel="stylesheet" href="nav.css">
         <link rel="stylesheet" href="project-container.css">
         <link rel="stylesheet" href="mobilenav.css">
+        <!--GOOGLE FONTS-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <a id="mobilelogo" href="index.html">MEL KRYCH</a>
         <div class="nav"> <!-- NAVIGATION: store several catagories that link to other pages. The box should be static, centered at the top -->
             <a id="navlogo" href="index.html">MEL KRYCH</a>
             <div id="navdivider">/</div>
@@ -15,8 +19,9 @@
             <a href="graphicdesign.html">GRAPHIC DESIGN</a>
             <a href="writing.html">WRITING</a>
         </div>
-        <div id="hamburger" href="javascript:void(0);" onclick="openNav()">&#9776;</div>
+        <div id="opennav" href="javascript:void(0);" onclick="openNav()">&#9776;</div>
         <div id="mobilenav">
+            <div id="closenav" href="javascript:void(0);" onclick="openNav()">X</div>
             <a class="selectedpage" href="index.html">FILM</a>
             <a href="photography.html">PHOTOGRAPHY</a>
             <a href="graphicdesign.html">GRAPHIC DESIGN</a>
@@ -24,45 +29,49 @@
         </div>
         <div class ="project-container"> <!-- THUMBNAIL CONTAINER: store images in a 2 wide grid at a responsive consistent width -->
             <div class="thumbnail">
-                <a href="film/fuckmen.html"><img src="film/thumbnails/fuckmen.jpg"></a>
+                <a href="fuckmen.html"><img src="film/thumbnails/fuckmen.jpg"></a>
                 <div class="thumbnail-caption">FUCK MEN</div>
             </div>
             <div class="thumbnail">
-                <a href="film/lastnight.html"><img src="film/thumbnails/lastnight.jpg"></a>
+                <a href="lastnight.html"><img src="film/thumbnails/lastnight.jpg"></a>
                 <div class="thumbnail-caption">LAST NIGHT</div>
             </div>
             <div class="thumbnail">
-                <a href="film/morethanfriends.html"><img src="film/thumbnails/morethanfriends.jpg"></a>
+                <a href="morethanfriends.html"><img src="film/thumbnails/morethanfriends.jpg"></a>
                 <div class="thumbnail-caption">MORE THAN FRIENDS</div>
             </div>
             <div class="thumbnail">
-                <a href="film/pomiedzy.html"><img src="film/thumbnails/pomiedzy.jpg"></a>
+                <a href="pomiedzy.html"><img src="film/thumbnails/pomiedzy.jpg"></a>
                 <div class="thumbnail-caption">POMIEDZY</div>
             </div>
             <div class="thumbnail">
-                <a href="film/quarantine.html"><img src="film/thumbnails/quarantine.jpg"></a>
+                <a href="quarantine.html"><img src="film/thumbnails/quarantine.jpg"></a>
                 <div class="thumbnail-caption">QUARANTINE</div>
             </div>
             <div class="thumbnail">
-                <a href="film/realite.html"><img src="film/thumbnails/realite.jpg"></a>
+                <a href="realite.html"><img src="film/thumbnails/realite.jpg"></a>
                 <div class="thumbnail-caption">REALITE</div>
             </div>
             <div class="thumbnail">
-                <a href="film/themorningafter.html"><img src="film/thumbnails/themorningafter.jpg"></a>
+                <a href="themorningafter.html"><img src="film/thumbnails/themorningafter.jpg"></a>
                 <div class="thumbnail-caption">THE MORNING AFTER</div>
             </div>
             <div class="thumbnail">
-                <a href="film/yellow.html"><img src="film/thumbnails/yellow.jpg"></a>
+                <a href="yellow.html"><img src="film/thumbnails/yellow.jpg"></a>
                 <div class="thumbnail-caption">YELLOW</div>
             </div>
         </div>
         <script>
             function openNav() {
             var x = document.getElementById("mobilenav");
+            var y = document.getElementById("opennav");
             if (x.style.display === "flex") {
                 x.style.display = "none";
+                y.style.display = "block";
             } else {
                 x.style.display = "flex";
+                y.style.display = "none";
+
             }
             }
         </script>
