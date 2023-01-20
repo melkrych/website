@@ -37,6 +37,7 @@
 .slideshow-button {
     z-index: 2;
     font-size: 21px;
+    cursor: pointer;
 }
 #download-button {
     z-index: 2;
@@ -45,8 +46,6 @@
     color: black;
     text-decoration: underline;
 }
-#button-left:hover {cursor: w-resize;}
-#button-right:hover {cursor: e-resize;}
 
 @media screen and (max-width: 600px) {
 .credits-box {max-width: 475px;}
