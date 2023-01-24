@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="nav.css">
+      <link rel="stylesheet" href="project-container.css">
+      <link rel="stylesheet" href="slideshow.css">
+      <link rel="stylesheet" href="mobilenav.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <!--GOOGLE FONTS-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+    <body>
+      <a id="mobilelogo" href="index.html">MEL KRYCH</a>
+      <div class="nav"> <!-- NAVIGATION: store several catagories that link to other pages. The box should be static, centered at the top -->
+          <a id="navlogo" href="index.html">MEL KRYCH</a>
+          <div id="navdivider">/</div>
+          <a href="index.html">FILM</a>
+          <a href="photography.html">PHOTOGRAPHY</a>
+          <a class="selectedpage" href="graphicdesign.html">GRAPHIC DESIGN</a>
+          <a href="writing.html">WRITING</a>
+      </div>
+      <div id="opennav" href="javascript:void(0);" onclick="openNav()">&#9776;</div>
+      <div id="mobilenav">
+          <div id="closenav" href="javascript:void(0);" onclick="openNav()">X</div>
+          <a href="index.html">FILM</a>
+          <a href="photography.html">PHOTOGRAPHY</a>
+          <a class="selectedpage" href="graphicdesign.html">GRAPHIC DESIGN</a>
+          <a href="writing.html">WRITING</a>
+      </div>
+      <div class="slideshow-container">
+        <div class="button-container">
+          <img style="margin-right: 240px;" src="svg/leftarrow.svg" onclick="plusDivs(-1)"></img>
+          <img style="margin-left: 240px;" src="svg/rightarrow.svg" onclick="plusDivs(1)"></img>
+        </div>
+        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 7.JPG">
+        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 8(1).JPG">
+        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 8(2).JPG">
+        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 9.JPG">
+        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 10.JPG">
+        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 11.JPG">
+        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 12.JPG">
+        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 13.JPG">
+        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 14.JPG">
+        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 15.JPG">
+      </div>
+      <script>
+          var slideIndex = 1;
+          showDivs(slideIndex);
+          
+          function plusDivs(n) {
+            showDivs(slideIndex += n);
+          }
+          
+          function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slideshow-item");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+            }
+            x[slideIndex-1].style.display = "block";  
+          }
+      </script>
+      <script>
+        function openNav() {
+        var x = document.getElementById("mobilenav");
+        var y = document.getElementById("opennav");
+        if (x.style.display === "flex") {
+            x.style.display = "none";
+            y.style.display = "block";
+        } else {
+            x.style.display = "flex";
+            y.style.display = "none";
+
+        }
+        }
+      </script>
+    </body>
+</html>

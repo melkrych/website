@@ -1,21 +1,26 @@
 body {
-    font-family: 'Public Sans', sans-serif;
+    font-family: 'Noticia Text', serif;
+    letter-spacing: .8px;
 }
 .nav {
     margin: 50px auto 0 auto;
     text-align: center;
 }
 .nav a {
-    padding: 8px;
     text-decoration: none;
+    padding: 8px;
     color: black;
 }
 .nav a:hover {
     cursor:pointer;
+    font-style: italic;
 }
 #navlogo {font-weight: bold; padding: 5px}
 #navdivider {display:inline; padding: 7px}
-.selectedpage {font-style:italic;}
+.selectedpage {
+    font-style:italic;
+    border-bottom: .9px solid black;
+}
 
 @media screen and (max-width: 600px) {
     .nav {display:none;}

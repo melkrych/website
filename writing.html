@@ -7,8 +7,9 @@
         <link rel="stylesheet" href="slideshow.css">
         <link rel="stylesheet" href="mobilenav.css">
         <!--GOOGLE FONTS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
       <a id="mobilelogo" href="index.html">MEL KRYCH</a>
@@ -28,26 +29,26 @@
             <a href="graphicdesign.html">GRAPHIC DESIGN</a>
             <a href="writing.html">WRITING</a>
         </div>
-        <button onclick="plusDivs(-1)" style="left: 0;" class="slideshow-hitbox"></button>
-        <button onclick="plusDivs(1)" style="right: 0;" class="slideshow-hitbox"></button>
         <div class="slideshow-container">
-            <img class="slideshow-item" src="writing/fearinhorror/1.jpg">
-            <img class="slideshow-item" src="writing/fearinhorror/2-3.jpg">
-            <img class="slideshow-item" src="writing/fearinhorror/4-5.jpg">
-            <img class="slideshow-item" src="writing/fearinhorror/6-7.jpg">
-            <img class="slideshow-item" src="writing/fearinhorror/8-9.jpg">
-            <img class="slideshow-item" src="writing/fearinhorror/10-11.jpg">
-            <img class="slideshow-item" src="writing/fearinhorror/12-13.jpg">
-            <img class="slideshow-item" src="writing/fearinhorror/14-15.jpg">
-            <img class="slideshow-item" src="writing/fearinhorror/16-17.jpg">
-            <img class="slideshow-item" src="writing/fearinhorror/18-19.jpg">
-            <img class="slideshow-item" src="writing/fearinhorror/20-21.jpg">
-            <img class="slideshow-item" src="writing/fearinhorror/22-23.jpg">
-            <img class="slideshow-item" src="writing/fearinhorror/24-25.jpg">
+          <div class="button-container">
+            <img src="svg/leftarrow.svg" onclick="plusDivs(-1)"></img>
+            <img src="svg/rightarrow.svg" onclick="plusDivs(1)"></img>
+          </div>
+          <img class="slideshow-item" src="writing/fearinhorror/1.jpg">
+          <img class="slideshow-item" src="writing/fearinhorror/2-3.jpg">
+          <img class="slideshow-item" src="writing/fearinhorror/4-5.jpg">
+          <img class="slideshow-item" src="writing/fearinhorror/6-7.jpg">
+          <img class="slideshow-item" src="writing/fearinhorror/8-9.jpg">
+          <img class="slideshow-item" src="writing/fearinhorror/10-11.jpg">
+          <img class="slideshow-item" src="writing/fearinhorror/12-13.jpg">
+          <img class="slideshow-item" src="writing/fearinhorror/14-15.jpg">
+          <img class="slideshow-item" src="writing/fearinhorror/16-17.jpg">
+          <img class="slideshow-item" src="writing/fearinhorror/18-19.jpg">
+          <img class="slideshow-item" src="writing/fearinhorror/20-21.jpg">
+          <img class="slideshow-item" src="writing/fearinhorror/22-23.jpg">
+          <img class="slideshow-item" src="writing/fearinhorror/24-25.jpg">
         </div>
         <div class="credits-box">
-          <a onclick="plusDivs(-1)" style="padding-right: 40%;" class="slideshow-button">&#60;</a>
-          <a onclick="plusDivs(1)" style="padding-left: 40%;" class="slideshow-button">&#62;</a>
           <a href="writing/fearinhorror/Fear in horror film stills.pdf" download="Fear in horror film stills.pdf" id="download-button">
             Download PDF
           </a>
