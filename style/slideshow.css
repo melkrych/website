@@ -19,6 +19,7 @@
 }
 .credits-box {
     margin: 20px auto 50px auto;
+    font-size: 12px;
     display: flex;
     padding: 10px;
     justify-content: center;
@@ -28,7 +29,15 @@
 }
 .button-container {
     position: absolute;
-    margin-top: 280px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 90vw;
+    height: 600px;
+}
+.button-container img {
+    width: 30px;
+    height: 30px;
 }
 
 #download-button {
@@ -40,9 +49,16 @@
 }
 
 @media screen and (max-width: 600px) {
+.button-container {
+    height: 380px;
+}
+.button-container img {
+    width: 15px;
+    height: 15px;
+}
 .credits-box {max-width: 475px;}
 .slideshow-item {
-    height: 450px;
+    height: 380px;
 }
 .slideshow-video {
     margin-top: 30%;

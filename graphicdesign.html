@@ -2,10 +2,10 @@
 <html>
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="nav.css">
-      <link rel="stylesheet" href="project-container.css">
-      <link rel="stylesheet" href="slideshow.css">
-      <link rel="stylesheet" href="mobilenav.css">
+      <link rel="stylesheet" href="style/nav.css">
+      <link rel="stylesheet" href="style/project-container.css">
+      <link rel="stylesheet" href="style/slideshow.css">
+      <link rel="stylesheet" href="style/mobilenav.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <!--GOOGLE FONTS-->
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,38 +13,38 @@
       <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   </head>
     <body>
-      <a id="mobilelogo" href="index.html">MEL KRYCH</a>
+      <a id="mobilelogo" href="index">MEL KRYCH</a>
       <div class="nav"> <!-- NAVIGATION: store several catagories that link to other pages. The box should be static, centered at the top -->
-          <a id="navlogo" href="index.html">MEL KRYCH</a>
+          <a id="navlogo" href="index">MEL KRYCH</a>
           <div id="navdivider">/</div>
-          <a href="index.html">FILM</a>
-          <a href="photography.html">PHOTOGRAPHY</a>
-          <a class="selectedpage" href="graphicdesign.html">GRAPHIC DESIGN</a>
-          <a href="writing.html">WRITING</a>
+          <a href="index">FILM</a>
+          <a href="photography">PHOTOGRAPHY</a>
+          <a class="selectedpage" href="graphicdesign">GRAPHIC DESIGN</a>
+          <a href="writing">WRITING</a>
       </div>
       <div id="opennav" href="javascript:void(0);" onclick="openNav()">&#9776;</div>
       <div id="mobilenav">
           <div id="closenav" href="javascript:void(0);" onclick="openNav()">X</div>
-          <a href="index.html">FILM</a>
-          <a href="photography.html">PHOTOGRAPHY</a>
-          <a class="selectedpage" href="graphicdesign.html">GRAPHIC DESIGN</a>
-          <a href="writing.html">WRITING</a>
+          <a href="index">FILM</a>
+          <a href="photography">PHOTOGRAPHY</a>
+          <a class="selectedpage" href="graphicdesign">GRAPHIC DESIGN</a>
+          <a href="writing">WRITING</a>
       </div>
       <div class="slideshow-container">
         <div class="button-container">
           <img src="svg/leftarrow.svg" onclick="plusDivs(-1)"></img>
           <img src="svg/rightarrow.svg" onclick="plusDivs(1)"></img>
         </div>
-        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 7.JPG">
-        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 8(1).JPG">
-        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 8(2).JPG">
-        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 9.JPG">
-        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 10.JPG">
-        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 11.JPG">
-        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 12.JPG">
-        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 13.JPG">
-        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 14.JPG">
-        <img class="slideshow-item" src="graphicdesign/Untitled_Artwork 15.JPG">
+        <img class="slideshow-item" src="graphicdesign/images/Untitled_Artwork 7.JPG">
+        <img class="slideshow-item" src="graphicdesign/images/Untitled_Artwork 8(1).JPG">
+        <img class="slideshow-item" src="graphicdesign/images/Untitled_Artwork 8(2).JPG">
+        <img class="slideshow-item" src="graphicdesign/images/Untitled_Artwork 9.JPG">
+        <img class="slideshow-item" src="graphicdesign/images/Untitled_Artwork 10.JPG">
+        <img class="slideshow-item" src="graphicdesign/images/Untitled_Artwork 11.JPG">
+        <img class="slideshow-item" src="graphicdesign/images/Untitled_Artwork 12.JPG">
+        <img class="slideshow-item" src="graphicdesign/images/Untitled_Artwork 13.JPG">
+        <img class="slideshow-item" src="graphicdesign/images/Untitled_Artwork 14.JPG">
+        <img class="slideshow-item" src="graphicdesign/images/Untitled_Artwork 15.JPG">
       </div>
       <script>
           var slideIndex = 1;
