@@ -3,12 +3,12 @@
     margin: 6% auto 0 auto;
     display: flex;
     justify-content:space-evenly;
+    align-items: center;
     flex-wrap: wrap;
-    align-content: left;
 }
 .slideshow-item {
-    width: auto;
-    height: 600px;
+    max-width: 80vw;
+    max-height: 80vh;
 }
 .slideshow-title { /* VIDEO SLIDESHOWS ONLY, FRICTION w/ JS */
     text-align: left;
@@ -57,9 +57,7 @@
     height: 15px;
 }
 .credits-box {max-width: 475px;}
-.slideshow-item {
-    height: 380px;
-}
+
 .slideshow-video {
     margin-top: 30%;
     width: 392px;

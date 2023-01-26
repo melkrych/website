@@ -1,7 +1,7 @@
 .mobileheader {
     top: 10px;
+    height: 20px;
     position: sticky;
-    mix-blend-mode: difference;
 }
 #mobilenav {
     z-index: 3;
