@@ -2,10 +2,10 @@
 <html>
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="style/nav.css">
-      <link rel="stylesheet" href="style/project-container.css">
-      <link rel="stylesheet" href="style/slideshow.css">
-      <link rel="stylesheet" href="style/mobilenav.css">
+      <link rel="stylesheet" href="/style/nav.css">
+      <link rel="stylesheet" href="/style/project-container.css">
+      <link rel="stylesheet" href="/style/slideshow.css">
+      <link rel="stylesheet" href="/style/mobilenav.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <!--GOOGLE FONTS-->
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,32 +14,33 @@
   </head>
     <body>
       <div class="nav"> <!-- NAVIGATION: store several catagories that link to other pages. The box should be static, centered at the top -->
-          <a id="navlogo" href="index">MEL KRYCH</a>
-          <div id="navdivider">/</div>
-          <a href="index">FILM</a>
-          <a href="photography">PHOTOGRAPHY</a>
-          <a class="selectedpage" href="graphicdesign">GRAPHIC DESIGN</a>
-          <a href="writing">WRITING</a>
+        <a id="navlogo" href="/index">MEL KRYCH</a>
+        <div id="navdivider">/</div>
+        <a href="/index">FILM</a>
+        <a class="selectedpage" href="/photography">PHOTOGRAPHY</a>
+        <a href="/graphicdesign">GRAPHIC DESIGN</a>
+        <a href="/writing">WRITING</a>
       </div>
       <div class="mobileheader">
         <img id="opennav" src="svg/menu.svg" href="javascript:void(0);" onclick="openNav()"></img>
-        <div id="mobilelogo" href="index">MEL KRYCH</div>
+        <div id="mobilelogo" href="/index">MEL KRYCH</div>
       </div>
       <div id="mobilenav">
-          <img id="closenav" src="svg/close.svg" href="javascript:void(0);" onclick="openNav()"></img>
-          <a class="selectedpage" href="index">FILM</a>
-          <a href="photography">PHOTOGRAPHY</a>
-          <a href="graphicdesign">GRAPHIC DESIGN</a>
-          <a href="writing">WRITING</a>
-      </div>
+        <img id="closenav" src="svg/close.svg" href="javascript:void(0);" onclick="openNav()"></img>
+        <a href="/index">FILM</a>
+        <a class="selectedpage" href="/photography">PHOTOGRAPHY</a>
+        <a href="/graphicdesign">GRAPHIC DESIGN</a>
+        <a href="/writing">WRITING</a>
       </div>
       <div class="slideshow-container">
         <div class="button-container">
           <img src="svg/leftarrow.svg" onclick="plusDivs(-1)"></img>
           <img src="svg/rightarrow.svg" onclick="plusDivs(1)"></img>
         </div>
-        <img class="slideshow-item" src="/photography/body/23960023.JPG">
-
+        <img class="slideshow-item" src="/photography/body/1.JPG">
+        <img class="slideshow-item" src="/photography/body/2.JPG">
+        <img class="slideshow-item" src="/photography/body/3.JPG">
+        <img class="slideshow-item" src="/photography/body/4.JPG">
       </div>
       <script>
           var slideIndex = 1;

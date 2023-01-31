@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="/style/nav.css">
+      <link rel="stylesheet" href="/style/project-container.css">
+      <link rel="stylesheet" href="/style/slideshow.css">
+      <link rel="stylesheet" href="/style/mobilenav.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <!--GOOGLE FONTS-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+    <body>
+      <div class="nav"> <!-- NAVIGATION: store several catagories that link to other pages. The box should be static, centered at the top -->
+        <a id="navlogo" href="/index">MEL KRYCH</a>
+        <div id="navdivider">/</div>
+        <a href="/index">FILM</a>
+        <a class="selectedpage" href="/photography">PHOTOGRAPHY</a>
+        <a href="/graphicdesign">GRAPHIC DESIGN</a>
+        <a href="/writing">WRITING</a>
+      </div>
+      <div class="mobileheader">
+        <img id="opennav" src="svg/menu.svg" href="javascript:void(0);" onclick="openNav()"></img>
+        <div id="mobilelogo" href="/index">MEL KRYCH</div>
+      </div>
+      <div id="mobilenav">
+        <img id="closenav" src="svg/close.svg" href="javascript:void(0);" onclick="openNav()"></img>
+        <a href="/index">FILM</a>
+        <a class="selectedpage" href="/photography">PHOTOGRAPHY</a>
+        <a href="/graphicdesign">GRAPHIC DESIGN</a>
+        <a href="/writing">WRITING</a>
+      </div>
+      <div class="slideshow-container">
+        <div class="button-container">
+          <img src="svg/leftarrow.svg" onclick="plusDivs(-1)"></img>
+          <img src="svg/rightarrow.svg" onclick="plusDivs(1)"></img>
+        </div>
+        <img class="slideshow-item" src="/photography/travel/1.JPG">
+        <img class="slideshow-item" src="/photography/travel/2.JPG">
+        <img class="slideshow-item" src="/photography/travel/3.JPG">
+        <img class="slideshow-item" src="/photography/travel/4.JPG">
+        <img class="slideshow-item" src="/photography/travel/5.jpg">
+        <img class="slideshow-item" src="/photography/travel/6.jpg">
+        <img class="slideshow-item" src="/photography/travel/7.jpg">
+        <img class="slideshow-item" src="/photography/travel/8.JPG">
+        <img class="slideshow-item" src="/photography/travel/9.JPG">
+        <img class="slideshow-item" src="/photography/travel/10.JPG">
+      </div>
+      <script>
+          var slideIndex = 1;
+          showDivs(slideIndex);
+          
+          function plusDivs(n) {
+            showDivs(slideIndex += n);
+          }
+          
+          function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slideshow-item");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+            }
+            x[slideIndex-1].style.display = "block";  
+          }
+      </script>
+      <script>
+        function openNav() {
+        var x = document.getElementById("mobilenav");
+        var y = document.getElementById("opennav");
+        if (x.style.display === "flex") {
+            x.style.display = "none";
+            y.style.display = "block";
+        } else {
+            x.style.display = "flex";
+            y.style.display = "none";
+
+        }
+        }
+      </script>
+    </body>
+</html>
