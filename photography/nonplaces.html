@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="/style/nav.css">
+      <link rel="stylesheet" href="/style/project-container.css">
+      <link rel="stylesheet" href="/style/slideshow.css">
+      <link rel="stylesheet" href="/style/mobilenav.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <!--GOOGLE FONTS-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+    <body>
+      <div class="nav"> <!-- NAVIGATION: store several catagories that link to other pages. The box should be static, centered at the top -->
+        <a id="navlogo" href="/index">MEL KRYCH</a>
+        <div id="navdivider">/</div>
+        <a href="/index">FILM</a>
+        <a class="selectedpage" href="/photography">PHOTOGRAPHY</a>
+        <a href="/graphicdesign">GRAPHIC DESIGN</a>
+        <a href="/writing">WRITING</a>
+      </div>
+      <div class="mobileheader">
+        <img id="opennav" src="/svg/menu.svg" href="javascript:void(0);" onclick="openNav()"></img>
+        <div id="mobilelogo" href="/index">MEL KRYCH</div>
+      </div>
+      <div id="mobilenav">
+        <img id="closenav" src="/svg/close.svg" href="javascript:void(0);" onclick="openNav()"></img>
+        <a href="/index">FILM</a>
+        <a class="selectedpage" href="/photography">PHOTOGRAPHY</a>
+        <a href="/graphicdesign">GRAPHIC DESIGN</a>
+        <a href="/writing">WRITING</a>
+      </div>
+      <div class="slideshow-container">
+        <div class="button-container">
+          <img src="/svg/leftarrow.svg" onclick="plusDivs(-1)"></img>
+          <img src="/svg/rightarrow.svg" onclick="plusDivs(1)"></img>
+        </div>
+        <img class="slideshow-item" src="/photography/nonplaces/1.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/2.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/3.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/4.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/5.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/6.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/7.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/8.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/9.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/10.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/11.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/12.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/13.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/14.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/15.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/16.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/17.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/18.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/19.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/20.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/21.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/22.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/23.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/24.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/25.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/26.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/27.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/28.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/29.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/30.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/31.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/32.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/33.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/34.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/35.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/36.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/37.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/38.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/39.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/40.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/41.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/42.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/43.jpg">
+        <img class="slideshow-item" src="/photography/nonplaces/44.jpg">
+      </div>
+      <div class="credits-box">
+        <a href="/photography/nonplaces/nonplaces-book.pdf" download="nonplaces-book.pdf" id="download-button">
+          Download PDF
+        </a>
+      </div>
+      <script>
+          var slideIndex = 1;
+          showDivs(slideIndex);
+          
+          function plusDivs(n) {
+            showDivs(slideIndex += n);
+          }
+          
+          function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slideshow-item");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+            }
+            x[slideIndex-1].style.display = "block";  
+          }
+      </script>
+      <script>
+        function openNav() {
+        var x = document.getElementById("mobilenav");
+        var y = document.getElementById("opennav");
+        if (x.style.display === "flex") {
+            x.style.display = "none";
+            y.style.display = "block";
+        } else {
+            x.style.display = "flex";
+            y.style.display = "none";
+
+        }
+        }
+      </script>
+    </body>
+</html>
