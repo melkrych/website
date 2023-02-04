@@ -14,9 +14,9 @@
 .project-header {
     width: 100%;
     text-align: center;
-    margin: 30px 0 30px 0;
-    font-weight: bold;
-    font-size: 16px;
+    margin: 15px 0 15px 0;
+    text-decoration: underline;
+    font-size: 15px;
 }
 .thumbnail a img {
     width: 100%;
@@ -27,5 +27,5 @@
 @media screen and (max-width: 600px) {
     .thumbnail {
         width: 90%;
-    }    
+    }
 }
